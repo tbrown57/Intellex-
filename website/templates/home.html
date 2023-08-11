@@ -26,6 +26,7 @@
       {% if records %}
         {% for record in records %}
           <tr>
+            <td style="display:none">{{ record.id }}</td>
             <td>{{ record.industry }}</td>
             <td>{{ record.business_name }}</td>
             <td>{{ record.first_name }}</td>
@@ -37,8 +38,8 @@
             <td>{{ record.state }}</td>
             <td>{{ record.zipcode }}</td>
             <td>
-              <a href="{% url 'record' record.id %}" class="btn btn-primary btn-sm" role="button" data-bs-toggle="button">VIEW</a>
-              <a href="#" class="btn btn-secondary btn-sm" role="button" data-bs-toggle="button">EDIT</a>
+              <a href="{% url 'record' record.id %}" class="btn btn-primary btn-sm" role="button" >VIEW</a>
+              <a href="#" class="btn btn-secondary btn-sm" role="button" >EDIT</a>
             </td>
     
           </tr>
